@@ -91,7 +91,8 @@
         </record>
 
 
-        <menuitem   id="mesa_partes_menu" 
+        <menuitem   id="mesa_partes_menu"
+                    web_icon="mesa_partes_it,static/description/icon.png" 
                     name="Mesa de Partes"
                     sequence="10"/>
 
