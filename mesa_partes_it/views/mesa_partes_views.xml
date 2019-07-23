@@ -94,13 +94,13 @@
         <menuitem   id="mesa_partes_menu"
                     web_icon="mesa_partes_it,static/description/icon.png" 
                     name="Mesa de Partes"
-                    sequence="10"/>
+                    sequence="1000"/>
 
 
 
         <menuitem   id="mesa_partes_sub_menu"
                     name="Mesa de Partes" 
-                    parent="mesa_partes_menu" 
+                    parent="mesa_partes_menu"   
                     action= "mesa_partes_action"
                     sequence="1"/>
 
