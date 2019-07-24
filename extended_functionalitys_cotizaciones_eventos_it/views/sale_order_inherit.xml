@@ -15,7 +15,7 @@
                         class="oe_stat_button"
                         icon="fa-newspaper-o"
                         attrs="{'invisible': [('event_id_count', '=', 0)]}" groups="base.group_user">
-                        <field name="event_id_count" string="Evento"/>
+                        <field name="event_id_count" widget="statinfo" string="Evento"/>
                     </button>
         </xpath>
 

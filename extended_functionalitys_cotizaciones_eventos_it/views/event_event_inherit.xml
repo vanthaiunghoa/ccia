@@ -14,7 +14,7 @@
                             class="oe_stat_button"
                             icon="fa-usd"
                             attrs="{'invisible': [('sale_order_count', '=', 0)]}" groups="base.group_user">
-                            <field name="sale_order_count" string="Cotizacion"/>
+                            <field name="sale_order_count" widget="statinfo" string="Cotizacion"/>
                       </button>
       </xpath>
         <field name="date_tz" position="after">
