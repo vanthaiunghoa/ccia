@@ -9,18 +9,20 @@
       <field name="inherit_id" ref="event.view_event_form"/>
       <field name="arch" type="xml">
       <xpath expr="//button[@name='toggle_active']" position="before">
-                    <field name="sale_order_id" invisible="1"/>
-                    <button type="object"
-                          name="action_view_sale_order"
-                          class="oe_stat_button"
-                          icon="fa-wrench"
-                          attrs="{'invisible': [('sale_order_count', '=', 0)]}" groups="base.group_user">
-                          <field name="sale_order_count" widget="statinfo" string="Cotizacion"/>
-                    </button>
+                      <button type="object"
+                            name="action_view_sale_order"
+                            class="oe_stat_button"
+                            icon="fa-usd"
+                            attrs="{'invisible': [('sale_order_count', '=', 0)]}" groups="base.group_user">
+                            <field name="sale_order_count" string="Cotizacion"/>
+                      </button>
       </xpath>
-
-
-
+        <field name="date_tz" position="after">
+          <field name="contact"/>
+          <field name="contact_name" readonly="1"/>
+          <field name="contact_function" readonly="1"/>
+          <field name="contact_mail" readonly="1"/>
+        </field>
       </field>
     </record>
 

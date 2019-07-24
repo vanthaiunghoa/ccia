@@ -68,6 +68,11 @@ class event_event_inherit(models.Model):
 	_inherit = 'event.event'
 	sale_order_id = fields.Many2one('sale.order','Cotizacion')
 	sale_order_count = fields.Integer(string='Cotizaciones', compute='_compute_sale_order_ids')
+	
+	contact = fields.Many2one('res.partner','Contacto')
+	contact_name = fields.Char('Nombre de Contacto', related='contact.name')
+	contact_function = fields.Char('Cargo de Contacto', related='contact.function')
+	contact_mail = fields.Char('Email de Contacto', related='contact.email')
 
 	@api.multi
 	@api.depends('sale_order_id')

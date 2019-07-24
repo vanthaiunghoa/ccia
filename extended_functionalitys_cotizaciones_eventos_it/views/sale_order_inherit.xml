@@ -10,15 +10,13 @@
       <field name="arch" type="xml">
 
        <xpath expr="//button[@name='action_view_invoice']" position="before">
-                    <field name="event_id" invisible="1"/>
-
                     <button type="object"
-                          name="action_view_event"
-                          class="oe_stat_button"
-                          icon="fa-wrench"
-                          attrs="{'invisible': [('event_id_count', '=', 0)]}" groups="base.group_user">
-                          <field name="event_id_count" widget="statinfo" string="Evento"/>
-                      </button>
+                        name="action_view_event"
+                        class="oe_stat_button"
+                        icon="fa-newspaper-o"
+                        attrs="{'invisible': [('event_id_count', '=', 0)]}" groups="base.group_user">
+                        <field name="event_id_count" string="Evento"/>
+                    </button>
         </xpath>
 
         <xpath expr="//sheet/notebook" position="inside">
