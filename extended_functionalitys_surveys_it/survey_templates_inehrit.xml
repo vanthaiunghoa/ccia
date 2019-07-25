@@ -60,7 +60,7 @@
 
 
 
-	<template id="attachment" name="Adjuntar Archivos">
+	<template id="survey.attachment" name="Adjuntar Archivos">
 			<div>HAGA CLICK EN ESTE LINK <a t-att-href="'/survey/print/%s/%s' % (slug(survey), token)" target="_blank">PARA IMPRIMIR LA SOLICITUD</a>.</div>
 			<br>LUEGO FIRME LA SOLICITUD, ESCANÉELA O TOMELÉ UNA FOTO PARA POSTERIORMENTE ADJUNTAR LA IMAGEN HACIENDO CLICK EN SELECCIONAR ARCHIVO</br>
 			<input type="file" class="form-control" t-att-name="prefix"/>

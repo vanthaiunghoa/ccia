@@ -152,6 +152,13 @@ class SurveyUserInputLine(models.Model):
 
 	value_attachment = fields.Binary('Archivo Adjunto')
 	value_attachment_name = fields.Char('Nombre del Archivo')
+	answer_type = fields.Selection([
+        ('text', 'Text'),
+        ('number', 'Number'),
+        ('date', 'Date'),
+        ('free_text', 'Free Text'),
+        ('suggestion', 'Suggestion'),
+        ('attachment', 'Attachment')], string='Answer Type')
 
 	@api.model
 	def save_line_attachment(self, user_input_id, question, post, answer_tag):
