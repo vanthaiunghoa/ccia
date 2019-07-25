@@ -66,13 +66,19 @@ class sale_order_inherit(models.Model):
 
 class event_event_inherit(models.Model):
 	_inherit = 'event.event'
+
 	sale_order_id = fields.Many2one('sale.order','Cotizacion')
 	sale_order_count = fields.Integer(string='Cotizaciones', compute='_compute_sale_order_ids')
+
+	partner_id = fields.Many2one('res.partner', 'Cliente',related='sale_order_id.partner_id')
 	
-	contact = fields.Many2one('res.partner','Contacto')
-	contact_name = fields.Char('Nombre de Contacto', related='contact.name')
-	contact_function = fields.Char('Cargo de Contacto', related='contact.function')
+	contact = fields.Many2one('res.partner', related='sale_order_id.partner_order_id')
 	contact_mail = fields.Char('Email de Contacto', related='contact.email')
+	contact_phone = fields.Char('Telefono de Contacto', related='contact.phone')
+	contact_mobile = fields.Char('Celular de Contacto', related='contact.mobile')
+	equipos_evento = fields.Text('Equipos')
+	arreglo_evento = fields.Text('Arreglo')
+	observaciones_event = fields.Text('Observaciones')
 
 	@api.multi
 	@api.depends('sale_order_id')
@@ -90,4 +96,3 @@ class event_event_inherit(models.Model):
 			action['views'] = [(self.env.ref('sale.view_order_form').id, 'form')]
 			action['res_id'] = pickings.id
 		return action
-

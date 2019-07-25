@@ -10,7 +10,7 @@
     """,
     'author': "ITGRUPO-CCIA",
     'website': "http://www.itgrupo.net",
-    'depends': ['event','sale'],
+    'depends': ['event','sale','sale_order_contact'],
     'data': [
             'views/sale_order_inherit.xml',
             'views/event_event_inherit.xml',

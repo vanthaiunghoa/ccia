@@ -18,11 +18,23 @@
                       </button>
       </xpath>
         <field name="date_tz" position="after">
+          <field name="partner_id"/>
           <field name="contact"/>
-          <field name="contact_name" readonly="1"/>
-          <field name="contact_function" readonly="1"/>
           <field name="contact_mail" readonly="1"/>
+          <field name="contact_phone" readonly="1"/>
+          <field name="contact_mobile" readonly="1"/>
+          
         </field>
+
+        <xpath expr="//sheet/notebook" position="inside">
+                  <page string="Datos Adicionales">
+                    <group>
+                      <field name="equipos_evento"/>
+                      <field name="arreglo_evento"/>
+                      <field name="observaciones_event"/>
+                    </group>
+                  </page>
+        </xpath>
       </field>
     </record>
 
